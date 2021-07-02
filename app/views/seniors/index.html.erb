@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Seniors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Full Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seniors.each do |senior| %>
+      <tr>
+        <td><%= senior.full_name %></td>
+        <td><%= senior.phone %></td>
+        <td><%= senior.email %></td>
+        <td><%= link_to 'Show', senior %></td>
+        <td><%= link_to 'Edit', edit_senior_path(senior) %></td>
+        <td><%= link_to 'Destroy', senior, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Senior', new_senior_path %>
+<br>
+<br>
+<%= link_to 'Landscaping Services', landscaping_services_path %>

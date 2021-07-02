@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  senior: MyString
+  student: MyString
+  landscape_service: MyString
+  fee_per_hour: 1.5
+  date_time: 2021-06-29 16:24:03
+
+two:
+  senior: MyString
+  student: MyString
+  landscape_service: MyString
+  fee_per_hour: 1.5
+  date_time: 2021-06-29 16:24:03

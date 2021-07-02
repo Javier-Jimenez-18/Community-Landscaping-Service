@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First Name:</strong>
+  <%= @senior.first_name %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @senior.last_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @senior.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @senior.email %>
+</p>
+
+<%= link_to 'Edit', edit_senior_path(@senior) %> |
+<%= link_to 'Back', seniors_path %>
+
+<%# if a senior has landscaping services, a list of them are shown in a table at the bottom,
+    with show/update/delete links. %>
+<h1>Landscaping Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Landscape Service:</th>
+      <th>Fee per Hour:</th>
+      <th>Date and Time:</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @senior.landscaping_services.each do |landscaping_service| %>
+      <tr>
+        <td><%= landscaping_service.landscape_service %></td>
+        <td><%= landscaping_service.fee_per_hour %></td>
+        <td><%= landscaping_service.date_time %></td>
+        <td><%= link_to 'Show', landscaping_service %></td>
+        <td><%= link_to 'Update', edit_landscaping_service_path(landscaping_service) %></td>
+        <td><%= link_to 'Destroy', landscaping_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

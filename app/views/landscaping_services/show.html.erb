@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Landscaping Service:</strong>
+  <%= @landscaping_service.landscape_service %>
+</p>
+
+<!-- <p> -->
+  <!-- <strong>Student:</strong> -->
+  <%# <%= Student.find(@landscaping_service.student_id).full_name %>
+<!-- </p> -->
+
+<p>
+  <strong>Senior:</strong>
+  <%= Senior.find(@landscaping_service.senior_id).full_name %>
+</p>
+
+<p>
+  <strong>Fee per Hour:</strong>
+  <%= @landscaping_service.fee_per_hour %>
+</p>
+
+<p>
+  <strong>Date and Time:</strong>
+  <%= @landscaping_service.date_time %>
+</p>
+
+<%= link_to 'Edit', edit_landscaping_service_path(@landscaping_service) %>
+<%= link_to 'Back', landscaping_services_path %>

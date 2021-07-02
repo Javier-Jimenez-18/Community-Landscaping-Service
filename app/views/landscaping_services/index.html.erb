@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Landscaping Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Landscape Service</th>
+      <th>Senior</th>
+      <th>Fee per Hour</th>
+      <th>Date and Time</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @landscaping_services.each do |landscaping_service| %>
+      <tr>
+        <td><%= landscaping_service.landscape_service %></td>
+        <td><%= landscaping_service.senior.full_name %></td>
+        <td><%= landscaping_service.fee_per_hour %></td>
+        <td><%= landscaping_service.date_time %></td>
+
+        <td><%= link_to 'Show', landscaping_service %></td>
+        <td><%= link_to 'Edit', edit_landscaping_service_path(landscaping_service) %></td>
+        <td><%= link_to 'Destroy', landscaping_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Landscaping Service', new_landscaping_service_path %>
+<br>
+<br>
+<%= link_to 'View Seniors', seniors_path %>
+<br>
+<%= link_to 'View Students', students_path %>

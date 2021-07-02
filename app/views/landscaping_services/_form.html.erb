@@ -1,0 +1,47 @@
+<%= form_for(landscaping_service) do |f| %>
+  <% if landscaping_service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(landscaping_service.errors.count, "error") %> prohibited this landscaping service from being saved:</h2>
+
+      <ul>
+      <% landscaping_service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- <div class="field"> -->
+    <%# <%= f.label :landscape_service %>
+    <%# <%= f.collection_select :landscape_service, LandscapingService.all, :fee_per_hour, :date_time, include_blank: true %>
+  <!-- </div> -->
+
+  <div class="field">
+    <%= f.label :senior_id %>
+    <%= f.collection_select :senior_id, Senior.all, :id, :full_name, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :landscape_service %>
+    <%= f.text_field :landscape_service %>
+  </div>
+
+  <div class="field">
+    <%= f.label :student_id %>
+    <%= f.collection_select :student_id, Student.all, :id, :full_name, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fee_per_hour %>
+    <%= f.text_field :fee_per_hour %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_time %>
+    <%= f.text_field :date_time %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
