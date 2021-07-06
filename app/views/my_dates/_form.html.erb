@@ -1,0 +1,39 @@
+<%= form_with(model: my_date, local: true) do |form| %>
+  <% if my_date.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(my_date.errors.count, "error") %> prohibited this my_date from being saved:</h2>
+
+      <ul>
+      <% my_date.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dt %>
+    <%= form.text_field :dt, id: 'flatpickr-date' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<script>
+document.addEventListener('turbolinks:load', function() {
+  const flatpickrDate = document.getElementById('flatpickr-date');
+  flatpickr(flatpickrDate, { enableTime: true});
+})
+</script>
+
+<!-- <script>
+document.addEventListener('turbolinks:load', function() {
+   flatpickr('.your-selector', {
+     enableTime: true,
+     plugins: [
+       new confirmDatePlugin({})
+     ]
+   })
+})
+</script> -->

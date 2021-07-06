@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Dates</h1>
+
+<table>
+  <thead>
+    <tr>
+
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_dates.each do |my_date| %>
+      <tr>
+        <td><%= my_date.dt&.strftime('%B %e, %Y %l:%M %p %Z') %></td>
+        <td><%= link_to 'Show', my_date %></td>
+        <td><%= link_to 'Edit', flatpickr_edit_path(my_date) %></td>
+        <td><%= link_to 'Destroy', my_date, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New My Date', flatpickr_new_path %>
+<br>
+<br>
+<%= link_to 'Landscaping Services', landscaping_services_path %>

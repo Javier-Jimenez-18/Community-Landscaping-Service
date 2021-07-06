@@ -10,18 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_29_062243) do
+ActiveRecord::Schema.define(version: 2021_07_03_035623) do
 
   create_table "landscaping_services", force: :cascade do |t|
     t.integer "senior_id"
     t.integer "student_id"
     t.string "landscape_service"
-    t.float "fee_per_hour"
+    t.decimal "fee_per_hour", precision: 6, scale: 2
     t.datetime "date_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["senior_id"], name: "index_landscaping_services_on_senior_id"
     t.index ["student_id"], name: "index_landscaping_services_on_student_id"
+  end
+
+  create_table "my_dates", force: :cascade do |t|
+    t.datetime "dt"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "seniors", force: :cascade do |t|
