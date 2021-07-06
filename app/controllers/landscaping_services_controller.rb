@@ -13,8 +13,8 @@ class LandscapingServicesController < ApplicationController
     @landscaping_services = LandscapingService.all
   end
 
-  # GET /oders/1
-  # GET /oders/1.json
+  # GET /landscaping_services/1
+  # GET /landscaping_services/1.json
   def show
   end
 
@@ -85,4 +85,4 @@ class LandscapingServicesController < ApplicationController
       flash.alert = e.to_s
       redirect_to landscaping_services_path
     end
-  end
+end

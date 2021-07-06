@@ -86,4 +86,4 @@ class SeniorsController < ApplicationController
       flash.alert = e.to_s
       redirect_to seniors_path
     end
-  end
+end

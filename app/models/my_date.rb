@@ -1,0 +1,2 @@
+class MyDate < ApplicationRecord
+end

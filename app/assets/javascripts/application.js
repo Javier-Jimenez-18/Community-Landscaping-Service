@@ -14,3 +14,17 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require flatpickr
+
+// To include the confirmDate plugin you must require the necessary assets and
+// specify the plugin during initialization:
+// = require flatpickr/plugins/confirmDate/confirmDate
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   flatpickr('.your-selector', {
+//     enableTime: true,
+//     plugins: [
+//       new confirmDatePlugin({})
+//     ]
+//   })
+// })

@@ -86,4 +86,4 @@ class StudentsController < ApplicationController
       flash.alert = e.to_s
       redirect_to students_path
     end
-  end
+end

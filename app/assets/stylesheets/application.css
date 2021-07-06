@@ -12,4 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= require flatpickr
+ */
+
+ /* Optionally, you can include any of the flatpickr themes by adding in their styles, like so:
+ *= require flatpickr/themes/dark
+ */
+
+ /* To include the confirmDate plugin you must require the necessary assets and
+    specify the plugin during initialization:
+    *= require flatpickr/plugins/confirmDate/confirmDate
  */

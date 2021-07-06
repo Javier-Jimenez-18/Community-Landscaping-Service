@@ -11,11 +11,6 @@
     </div>
   <% end %>
 
-  <!-- <div class="field"> -->
-    <%# <%= f.label :landscape_service %>
-    <%# <%= f.collection_select :landscape_service, LandscapingService.all, :fee_per_hour, :date_time, include_blank: true %>
-  <!-- </div> -->
-
   <div class="field">
     <%= f.label :senior_id %>
     <%= f.collection_select :senior_id, Senior.all, :id, :full_name, include_blank: true %>
@@ -38,10 +33,16 @@
 
   <div class="field">
     <%= f.label :date_time %>
-    <%= f.text_field :date_time %>
+    <%= f.text_field :date_time, id: 'flatpickr-date' %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<script>
+document.addEventListener('turbolinks:load', function() {
+  const flatpickrDate = document.getElementById('flatpickr-date');
+  flatpickr(flatpickrDate, { enableTime: true});
+})
+</script>

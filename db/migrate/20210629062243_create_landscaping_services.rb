@@ -4,7 +4,7 @@ class CreateLandscapingServices < ActiveRecord::Migration[5.2]
       t.references :senior, foreign_key: true
       t.references :student, foreign_key: true
       t.string :landscape_service
-      t.float :fee_per_hour
+      t.decimal :fee_per_hour, precision: 6, scale: 2
       t.datetime :date_time
 
       t.timestamps
