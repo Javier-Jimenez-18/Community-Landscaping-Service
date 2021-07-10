@@ -1,3 +1,10 @@
-<%= render 'form', landscaping_service: @landscaping_service %>
-
-<%= link_to 'Back', landscaping_services_path %>
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <h1>New Landscaping Service Form</h1>
+  <br>
+  <%= render 'form', landscaping_service: @landscaping_service %>
+  <br>
+  <%= link_to 'Back', landscaping_services_path, :class => "btn btn-primary btn-sm" %>
+</div>

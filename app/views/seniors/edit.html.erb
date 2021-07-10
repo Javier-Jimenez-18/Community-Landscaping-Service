@@ -1,6 +1,11 @@
-<h1>Editing Senior</h1>
-
-<%= render 'form', senior: @senior %>
-
-<%= link_to 'Show', @senior %> |
-<%= link_to 'Back', seniors_path %>
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <h1>Edit Senior</h1>
+  <br>
+  <%= render 'form', senior: @senior %>
+  <br>
+  <%= link_to 'Show', @senior, :class => "btn btn-primary btn-sm" %> |
+  <%= link_to 'Back', seniors_path, :class => "btn btn-primary btn-sm" %>
+</div>

@@ -1,4 +1,11 @@
-<%= render 'form', landscaping_service: @landscaping_service %>
-
-<%= link_to 'Show', @landscaping_service %> |
-<%= link_to 'Back', landscaping_services_path %>
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <h1>Edit Landscaping Service</h1>
+  <br>
+  <%= render 'form', landscaping_service: @landscaping_service %>
+  <br>
+  <%= link_to 'Show', @landscaping_service, :class => "btn btn-primary btn-sm" %> |
+  <%= link_to 'Back', landscaping_services_path, :class => "btn btn-primary btn-sm" %>
+</div>

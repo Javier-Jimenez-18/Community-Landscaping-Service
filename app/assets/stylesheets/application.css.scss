@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require flatpickr
+ *  require font-awesome
+ */
+
+ /* Optionally, you can include any of the flatpickr themes by adding in their styles, like so:
+ *= require flatpickr/themes/dark
+ */
+
+ /* To include the confirmDate plugin you must require the necessary assets and
+    specify the plugin during initialization:
+    *= require flatpickr/plugins/confirmDate/confirmDate
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+ @import "bootstrap";
+ @import "font-awesome";
+
+ $white: white;
+ $green: green;
+ $yellow: yellow;
+ $orange: orange;
+ $black: black;
+ $blue: blue;
+ $lightblue: lightblue;
+ $purple: purple;
+ $red: red;
+ $teal: teal;
+ $cyan: cyan;
+ $indigo: indigo;
+ $lightbrown: lightbrown;
+
+ .navbar {
+        margin-bottom: 0;
+        background: $blue;
+ }
+ body {
+        background: $teal;
+        color: $black;
+        font-family: 'Merriweather', sans-serif;
+ }
+ h1 {
+        color: $yellow;
+        font-weight: bold;
+ }
+ h2 {
+        color: $white;
+        font-weight: bold;
+ }
+ li {
+        color: $black;
+ }
+ p {
+        font-size: 16px;
+        color: $black;
+ }
+ a:visited {
+        color: $purple;
+ }
+ .jumbotron {
+        background: #2DE0FF;
+        color: $yellow;
+        text-align: center;
+        p {
+                color: $white;
+                font-size: 20px;
+        }
+ }
+ .link {
+        color: $white;
+ }
+ .btn-primary {
+        color: $black;
+        border-color: $black;
+        margin-bottom: 5px;
+ }
+ .btn-sm {
+        background-color: $lightbrown;
+        display: inline-block;
+ }
+ img,
+ video,
+ audio {
+        margin-top: 20px;
+        max-width: 80%;
+ }
+ caption {
+
+        float: left;
+        clear: both;
+
+ }
