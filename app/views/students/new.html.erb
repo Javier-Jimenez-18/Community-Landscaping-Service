@@ -1,5 +1,10 @@
-<h1>Student Registration Form</h1>
-
-<%= render 'form', student: @student %>
-
-<%= link_to 'Back', students_path %>
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <h1>Student Registration Form</h1>
+  <br>
+  <%= render 'form', student: @student %>
+  <br>
+  <%= link_to 'Back', students_path, :class => "btn btn-primary btn-sm" %>
+</div>

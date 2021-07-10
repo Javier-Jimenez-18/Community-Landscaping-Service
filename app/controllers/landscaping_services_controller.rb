@@ -33,7 +33,7 @@ class LandscapingServicesController < ApplicationController
     # Then do the render to :new.
     @landscaping_service = LandscapingService.new(landscaping_service_params)
     if @landscaping_service.save
-      flash.notice = "The landscaping_service record was created successfully."
+      flash.notice = "The landscaping service record was created successfully."
       redirect_to @landscaping_service
     else
       flash.now.alert = @landscaping_service.errors.full_messages.to_sentence
@@ -51,7 +51,7 @@ class LandscapingServicesController < ApplicationController
     # First collect the error and put it in the flash.now.alert
     # Then do the render to :edit.
     if @landscaping_service.update(landscaping_service_params)
-      flash.notice = "The landscaping_service record was updated successfully."
+      flash.notice = "The landscaping service record was updated successfully."
       redirect_to @landscaping_service
     else
       flash.now.alert = @landscaping_service.errors.full_messages.to_sentence
@@ -64,7 +64,7 @@ class LandscapingServicesController < ApplicationController
   def destroy
     @landscaping_service.destroy
     respond_to do |format|
-      format.html { redirect_to landscaping_services_url, notice: 'landscaping_service was successfully destroyed.' }
+      format.html { redirect_to landscaping_services_url, notice: 'The landscaping service record was successfully deleted.' }
       format.json { head :no_content }
     end
   end

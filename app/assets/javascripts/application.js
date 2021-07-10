@@ -12,9 +12,12 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= require flatpickr
+//= require jquery3
+//= require popper
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
-//= require flatpickr
 
 // To include the confirmDate plugin you must require the necessary assets and
 // specify the plugin during initialization:

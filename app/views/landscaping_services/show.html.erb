@@ -1,37 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Landscaping Service:</strong>
-  <%= @landscaping_service.landscape_service %>
-</p>
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>
+    <strong>Landscaping Service:</strong>
+    <%= @landscaping_service.landscape_service %>
+  </p>
 
-<p>
-  <strong>Senior:</strong>
-  <%= Senior.find(@landscaping_service.senior_id).full_name %>
-</p>
+  <p>
+    <strong>Senior:</strong>
+    <%= Senior.find(@landscaping_service.senior_id).full_name %>
+  </p>
 
-<p>
-  <strong>Fee per Hour:</strong>
-  <%= @landscaping_service.fee_per_hour %>
-</p>
+  <p>
+    <strong>Fee per Hour:</strong>
+    <%= @landscaping_service.fee_per_hour %>
+  </p>
 
-<p>
-  <strong>Date and Time:</strong>
-  <%= @landscaping_service.date_time %>
-</p>
+  <p>
+    <strong>Date and Time:</strong>
+    <%= @landscaping_service.date_time %>
+  </p>
 
-<% if @landscaping_service.student_id %>
-     <p>
-       <strong>Student Hired:</strong>
-       <%= Student.find(@landscaping_service.student_id).full_name %>
-     </p>
-<% else %>
-     <br>
-     <br>
-     <%= link_to 'Student: APPLY NOW to Landscape Service!', edit_landscaping_service_path(@landscaping_service) %>
-<% end %>
-
-<br>
-<br>
-<%= link_to 'Edit', edit_landscaping_service_path(@landscaping_service) %>
-<%= link_to 'Back', landscaping_services_path %>
+  <% if @landscaping_service.student_id %>
+       <p>
+         <strong>Student Hired:</strong>
+         <%= Student.find(@landscaping_service.student_id).full_name %>
+       </p>
+  <% else %>
+       <br>
+       <br>
+       <%= link_to 'Student: APPLY NOW to Landscape Service!', edit_landscaping_service_path(@landscaping_service), :class => "btn btn-primary btn-sm" %>
+  <% end %>
+  <br>
+  <br>
+  <%= link_to 'Edit', edit_landscaping_service_path(@landscaping_service), :class => "btn btn-primary btn-sm" %> |
+  <%= link_to 'Back', landscaping_services_path, :class => "btn btn-primary btn-sm" %>
+</div>

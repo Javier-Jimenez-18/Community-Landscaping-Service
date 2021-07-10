@@ -1,45 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Landscaping Services</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Landscape Service</th>
-      <th>Senior</th>
-      <th>Fee per Hour</th>
-      <th>Date and Time</th>
-      <th>Landscape Service Status</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @landscaping_services.each do |landscaping_service| %>
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <h1>Landscaping Services</h1>
+  <table>
+    <thead>
       <tr>
-        <td><%= landscaping_service.landscape_service %></td>
-        <td><%= landscaping_service.senior.full_name %></td>
-        <td><%= landscaping_service.fee_per_hour %></td>
-        <td><%= landscaping_service.date_time %></td>
-
-        <% if (landscaping_service.student_id) %>
-              <td>Job Booked</td>
-        <% else %>
-              <td>Job Available!</td>
-        <% end %>
-
-        <td><%= link_to 'Show', landscaping_service %></td>
-        <td><%= link_to 'Edit', edit_landscaping_service_path(landscaping_service) %></td>
-        <td><%= link_to 'Delete', landscaping_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th class="text-center my-5">Landscape Service</th>
+        <th class="text-center my-5">Senior</th>
+        <th class="text-center my-5">Fee per Hour</th>
+        <th class="text-center my-5">Date and Time</th>
+        <th class="text-center my-5">Landscape Service Status</th>
+        <th colspan="5"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-<%= link_to 'Seniors: POST NEW Landscaping Service NOW!', new_landscaping_service_path %>
-<br>
-<br>
-<%= link_to 'View Seniors', seniors_path %>
-<br>
-<%= link_to 'View Students', students_path %>
+    <tbody>
+      <% @landscaping_services.each do |landscaping_service| %>
+        <tr>
+          <td><%= landscaping_service.landscape_service %></td>
+          <td><%= landscaping_service.senior.full_name %></td>
+          <td><%= landscaping_service.fee_per_hour %></td>
+          <td><%= landscaping_service.date_time %></td>
+
+          <% if (landscaping_service.student_id) %>
+                <td>Job Booked</td>
+          <% else %>
+                <td>Job Available!</td>
+          <% end %>
+
+          <td><%= link_to 'Show', landscaping_service, :class => "btn btn-primary btn-sm" %></td>
+          <td><%= link_to 'Edit', edit_landscaping_service_path(landscaping_service), :class => "btn btn-primary btn-sm" %></td>
+          <td><%= link_to 'Delete', landscaping_service, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-sm" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'Seniors: POST NEW Landscaping Service NOW!', new_landscaping_service_path, :class => "btn btn-primary btn-sm" %>
+  <br>
+  <br>
+  <%= link_to 'View Seniors', seniors_path, :class => "btn btn-primary btn-sm" %>
+  <br>
+  <%= link_to 'View Students', students_path, :class => "btn btn-primary btn-sm" %>
+</div>

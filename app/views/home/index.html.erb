@@ -1,0 +1,281 @@
+<!-- <h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p> -->
+
+<html lang="en">
+  <head>
+    <title>The Community Landscaping Service Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  </head><!-- </head> -->
+
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid bg-primary text-yellow">
+    <div class="container text-sm-center pt-4">
+
+    <!-- Test Overlay Pic -->
+    <!-- <div class="card bg-dark text-black"> -->
+      <!-- <img src="./weed-whacking.jpg" class="card-img" alt="style-ized overlay girl weed wacking"> -->
+      <%# <%= image_tag 'landscape.jpg', class: "card-img" %>
+      <!-- <div class="card-img-overlay"> -->
+        <!-- <h5 class="card-title">The Community Landscaping Service Project</h5> -->
+        <!-- <p class="card-text">Students, are you ready to make a difference in your community and get paid for it at the same time?</p> -->
+        <!-- <p class="card-text">Seniors, are you ready to hire a hardworking student to get your lanscaping, front, or back yard cleaned up?</p> -->
+      <!-- </div> -->
+    <!-- </div><!-- end Test  -->
+
+      <h1 class="display-2">The Community Landscaping Service Project</h1>
+      <p class="lead">Students, are you ready to make a difference in your community</p>
+      <p>and get paid for it at the same time?</p>
+      <p class="lead">Seniors, are you ready to hire a hardworking student to get your</p>
+      <p>lanscaping, front, or back yard cleaned up?</p>
+      <div class="btn-group mt-4" role="group" aria-label="Callout buttons">
+        <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#register">Seniors and Students Register Now</button>
+      </div>
+      <br>
+      <br>
+      <%= button_to 'Get Landscaping Services Info', landscaping_services_path, :method => :get,  :class => "btn btn-secondary btn-lg" %>
+    </div>
+    </div> <!-- /jumbotron -->
+
+    <div class="container pt-4">
+        <!--  about  -->
+        <div id="about" class="row">
+          <h1 class="text-center my-5" class="mb-4">About The Community Landscaping Service Project</h1>
+          <div class="col-lg order-lg-1">
+            <%= image_tag 'man-backache.jpg', class: "img-fluid rounded d-block w-100", style: 'height:40vw;width:50vw;margin-bottom:0px;' %>
+            <h2 class="mb-4 text-muted my-5">Senior Citizens of all communities need help</h2>
+            <p>The elderly community, such as our parents or grandparents, often hurt themselves doing small tasks at home.
+               Things such as cleaning up the yard, moving flower pots around, cutting weeds, or mowing the lawn, can be very
+               dangerous tasks for them. Senior citizens (ages 65+) can sign up, schedule a landscaping appointment, and pay a small fee
+               per landscaping service. The Community Landscaping Service Project will benefit senior citizens by keeping their
+               lawns and landscaping looking clean and pleasant, without endangering their safety.
+            </p>
+          </div>
+          <div class="col-lg order-lg-3">
+            <%= image_tag 'lawn-mowing.jpg', class: "img-fluid  rounded d-block w-100", style: 'height:40vw;width:50vw;margin-bottom:0px;' %>
+            <h2 class="mb-4 text-muted my-5">Students of all communities need help</h2>
+            <p>Students often need a positive outlet during the summer months when they are out of school. A summer job is a
+               positive way for students to keep busy and earn money for their services. The Community Landscaping Project will
+               allow students (grades 9-12) to sign up for summer work. The students will provide hands on landscaping labor that
+               will instill in them discipline and motivation. These characteristics allow the students to acheive goals by weeding
+               out (no pun intended) the negative distractions in life.
+            </p>
+          </div>
+          <div class="col-lg order-lg-2">
+            <br>
+            <h3 class="text-center text-muted" class="mb-4">Landscaping Services Available</h3>
+            <div class="text-center" class="list-group">
+              <a class="list-group-item list-group-item-action"><strong>Mow Grass</strong></a>
+              <a class="list-group-item list-group-item-action"><strong>Weed Wacking</strong></a>
+              <a class="list-group-item list-group-item-action"><strong>Hedge Trimming</strong></a>
+              <a class="list-group-item list-group-item-action"><strong>Raking Leaves</strong></a>
+              <a class="list-group-item list-group-item-action"><strong>Watering Plants/Garden</strong></a>
+              <a class="list-group-item list-group-item-action"><strong>Yard Cleanup</strong></a>
+            </div>
+            <%= image_tag 'weed-whacker.jpg', class: "img-fluid my-5 rounded d-block w-100", style: 'height:35vw;width:50vw;margin-bottom:0px;' %>
+          </div>
+        </div> <!-- /about  -->
+
+        <!-- callout button -->
+        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#register">Seniors and Students: Don't Procrastinate, Register Now!</button>
+
+        <!-- signup form -->
+        <hr>
+        <div class="row py-4 text-muted">
+          <div class="col-md col-xl-5">
+            <p><strong>About Jimenez-Software</strong></p>
+            <p>The Jimenez-Software company brings affordable software solutions to businesses everywhere to help them achieve their goals and change the world.</p>
+          </div>
+          <div class="col-md col-xl-5 ml-auto">
+            <p><strong>Stay up-to-date on Jimenez-Software products</strong></p>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Email">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">Sign up</button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <hr> <!-- /signup form -->
+
+        <!-- footer -->
+        <div class="row py-3">
+          <div class="col-md-7">
+            <ul class="nav">
+              <!-- <li class="nav-item"> -->
+                <!-- <a class="nav-link" href="#">Community</a> -->
+              <!-- </li> -->
+              <!-- <li class="nav-item"> -->
+                <!-- <a class="nav-link" href="#">Volunteer</a> -->
+              <!-- </li> -->
+              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio1">Community</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio2">Volunteer</label>
+              </div>
+
+              <li class="nav-item">
+                <div class="btn-group dropup">
+                  <button type="button" class="btn btn-outline-primary">Other Services Available</button>
+                  <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Junk and Trash Removal</a>
+                    <a class="dropdown-item" href="#">Clean Gutters</a>
+                    <a class="dropdown-item" href="#">Window Washing</a>
+                    <a class="dropdown-item" href="#">Painting</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md text-md-right">
+            <small>&copy; 2021 The Community Landscaping Project</small>
+            <br>
+            <small>&amp; Jimenez-Software</small>
+          </div>
+        </div> <!-- /footer -->
+    </div> <!-- /.container -->
+
+<!--=====================================
+     FORM MODAL
+    =====================================-->
+    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="register form" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="exampleModalLabel">Register for The Community Landscaping Project</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--  registration form -->
+            <form>
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Hurry!</strong> Senior Citizens get a %15 discount off their first Landscaping Service!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <h5 class="mb-4">User Info</h5>
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="street address">Street Address:</label>
+                <input type="street address" class="form-control" id="street address">
+              </div>
+              <div class="form-group">
+                <label for="city">City:</label>
+                <input type="city" class="form-control" id="city">
+              </div>
+              <div class="form-group">
+                <label for="state">State:</label>
+                <input type="state" class="form-control" id="state">
+              </div>
+              <div class="form-group">
+                <label for="zip code">Zip Code:</label>
+                <input type="zip code" class="form-control" id="zip code">
+              </div>
+
+              <hr class="my-4">
+              <h5 class="mb-4">What is the user registering for?</h5>
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Senior Citizen Needs a Service</span>
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Student looking for Work</span>
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Student Volunteer</span>
+                </label>
+              </div>
+
+              <hr class="mb-4">
+              <h5 class="mb-4">Payment Info</h5>
+              <div class="form-row">
+                <div class="col-lg-6 form-group">
+                  <label for="cc-num">Card Number:</label>
+                  <input class="form-control" id="cc-num" type="text">
+                </div>
+
+                <div class="col-lg form-group">
+                  <label for="zip">Zip Code:</label>
+                  <input class="form-control" id="zip" type="text">
+                </div>
+
+                <div class="col-lg form-group">
+                  <label for="cvv">CVV:</label>
+                  <input class="form-control" id="cvv" type="text">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label class="col-lg-12">Expiration Date:</label>
+                <div class="form-group col-lg-8">
+                  <select class="custom-select form-control" id="exp-month">
+                    <option value="1">1 - January</option>
+                    <option value="2">2 - February</option>
+                    <option value="3">3 - March</option>
+                    <option value="4">4 - April</option>
+                    <option value="5">5 - May</option>
+                    <option value="6">6 - June</option>
+                    <option value="7">7 - July</option>
+                    <option value="8">8 - August</option>
+                    <option value="9">9 - September</option>
+                    <option value="10">10 - October</option>
+                    <option value="11">11 - November</option>
+                    <option value="12">12 - December</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-lg">
+                  <select class="custom-select form-control" id="exp-year">
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                  </select>
+                </div>
+              </div>
+
+              <hr class="mb-4">
+              <button type="submit" class="btn btn-primary btn-lg">Register</button>
+            </form> <!--  /registration form -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>
