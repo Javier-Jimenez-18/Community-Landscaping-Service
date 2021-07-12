@@ -10,12 +10,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  </head><!-- </head> -->
+  </head>
 
-  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
-  <!-- jumbotron -->
+  <body>
+    <!-- jumbotron -->
     <div class="jumbotron jumbotron-fluid bg-primary text-yellow">
-    <div class="container text-sm-center pt-4">
+    <div class="container text-sm-center pt-0">
 
     <!-- Test Overlay Pic -->
     <!-- <div class="card bg-dark text-black"> -->
@@ -36,13 +36,11 @@
       <div class="btn-group mt-4" role="group" aria-label="Callout buttons">
         <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#register">Seniors and Students Register Now</button>
       </div>
-      <br>
-      <br>
-      <%= button_to 'Get Landscaping Services Info', landscaping_services_path, :method => :get,  :class => "btn btn-secondary btn-lg" %>
+      <%# <%= button_to 'Get Landscaping Services Info', landscaping_services_path, :method => :get,  :class => "btn btn-secondary btn-lg" %>
     </div>
     </div> <!-- /jumbotron -->
 
-    <div class="container pt-4">
+    <div class="container pt-2">
         <!--  about  -->
         <div id="about" class="row">
           <h1 class="text-center my-5" class="mb-4">About The Community Landscaping Service Project</h1>
@@ -88,11 +86,11 @@
         <hr>
         <div class="row py-4 text-muted">
           <div class="col-md col-xl-5">
-            <p><strong>About Jimenez-Software</strong></p>
-            <p>The Jimenez-Software company brings affordable software solutions to businesses everywhere to help them achieve their goals and change the world.</p>
+            <p><strong>How to schedule for or apply to a landscaping service in your community</strong></p>
+            <p>Seniors and Students simply click on register to be able to post a landscaping service needed or sign up for a landscaping service job.</p>
           </div>
           <div class="col-md col-xl-5 ml-auto">
-            <p><strong>Stay up-to-date on Jimenez-Software products</strong></p>
+            <p><strong>Stay up-to-date on present and future community projects</strong></p>
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Email">
               <span class="input-group-btn">
@@ -107,19 +105,12 @@
         <div class="row py-3">
           <div class="col-md-7">
             <ul class="nav">
-              <!-- <li class="nav-item"> -->
-                <!-- <a class="nav-link" href="#">Community</a> -->
-              <!-- </li> -->
-              <!-- <li class="nav-item"> -->
-                <!-- <a class="nav-link" href="#">Volunteer</a> -->
-              <!-- </li> -->
-              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="btnradio1">Community</label>
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio2">Volunteer</label>
-              </div>
-
+              <li class="nav-item">
+                <a class="nav-link" href="#">Community</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Volunteer</a>
+              </li>
               <li class="nav-item">
                 <div class="btn-group dropup">
                   <button type="button" class="btn btn-outline-primary">Other Services Available</button>
@@ -137,9 +128,9 @@
             </ul>
           </div>
           <div class="col-md text-md-right">
-            <small>&copy; 2021 The Community Landscaping Project</small>
+            <small>&copy; 2021 The Community Landscaping Service Project</small>
             <br>
-            <small>&amp; Jimenez-Software</small>
+            <small>&amp; Javier Jimenez</small>
           </div>
         </div> <!-- /footer -->
     </div> <!-- /.container -->
@@ -151,7 +142,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header bg-primary text-white">
-            <h5 class="modal-title" id="exampleModalLabel">Register for The Community Landscaping Project</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Register for The Community Landscaping Service Project</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -271,7 +262,6 @@
         </div>
       </div>
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

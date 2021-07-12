@@ -1,18 +1,4 @@
 <!DOCTYPE html>
-<!-- <html>
-  <head>
-    <title>Community Landscaping Service</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%# <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%# <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> %> %>
-  </head>
-
-  <body>
-    <%# <%= yield %> %>
-  </body>
-</html> -->
 
 
 <html>
@@ -29,6 +15,10 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <main role="main">
     <%= content_for?(:content) ? yield(:content) : yield %>
     </main>

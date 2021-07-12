@@ -1,6 +1,7 @@
 class Student < ApplicationRecord
   has_many :landscaping_services
   has_many :seniors, through: :landscaping_services
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :phone, presence: true

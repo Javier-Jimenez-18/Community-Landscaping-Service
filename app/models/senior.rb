@@ -1,6 +1,7 @@
 class Senior < ApplicationRecord
   has_many :landscaping_services
   has_many :students, through: :landscaping_services
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :phone, presence: true
