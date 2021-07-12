@@ -39,7 +39,7 @@ gem 'jbuilder', '~> 2.5'
 # Needed for using Bootstrap
 gem 'jquery-rails'
 # Use to add Bootstrap to style Rails aplication
-gem 'bootstrap'
+# gem 'bootstrap'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -47,6 +47,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # datetimepicker with no dependencies. This gem packages flatpickr's assets
 # for drop-in use in Rails applications.
 gem 'flatpickr'
+
+# This gem gives you a nicer place to start customizing views for your Devise model
+# gem 'bootstrap', '~> 5.0.1'
+gem 'bootstrap', '~> 4.0'
+gem "bootstrap_form", ">= 4.0.0.alpha1"
+gem 'devise' # gem 'devise-i18n'
+# gem 'devise_invitable'
+gem 'devise-bootstrap-form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
