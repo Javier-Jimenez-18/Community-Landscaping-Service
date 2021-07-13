@@ -13,7 +13,7 @@
 
   <p>
     <strong>Senior:</strong>
-    <%= Senior.find(@landscaping_service.senior_id).full_name %>
+    <%= @landscaping_service.senior.full_name %>
   </p>
 
   <p>
@@ -29,7 +29,7 @@
   <% if @landscaping_service.student_id %>
        <p>
          <strong>Student Hired:</strong>
-         <%= Student.find(@landscaping_service.student_id).full_name %>
+         <%= @landscaping_service.student.full_name %>
        </p>
   <% else %>
        <br>
