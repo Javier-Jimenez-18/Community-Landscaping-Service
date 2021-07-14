@@ -24,10 +24,6 @@ RSpec.describe Senior, type: :model do
     subject.phone=nil
     expect(subject).to_not be_valid
   end
-  it "is not valid without an email" do
-    subject.email=nil
-    expect(subject).to_not be_valid
-  end
   it "is not valid if the phone number is less than 10 digits" do
     subject.phone = "123456789"
     expect(subject).to_not be_valid
@@ -39,6 +35,10 @@ RSpec.describe Senior, type: :model do
   it "is not valid if the phone number is not all digits" do
     subject.phone = "012345678a"
     expect( (subject.phone).match?(/\A-?\d+\Z/) ).to eq(false)
+  end
+  it "is not valid without an email" do
+    subject.email=nil
+    expect(subject).to_not be_valid
   end
   it "is not valid if the email address doesn't have a @" do
     subject.email="e_scrooge&gmail.com"

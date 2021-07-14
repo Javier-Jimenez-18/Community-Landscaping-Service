@@ -36,8 +36,7 @@
       <div class="btn-group mt-4" role="group" aria-label="Callout buttons">
         <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#register">Seniors and Students Register Now</button>
       </div>
-      <%# <%= button_to 'Get Landscaping Services Info', landscaping_services_path, :method => :get,  :class => "btn btn-secondary btn-lg" %>
-    </div>
+      </div>
     </div> <!-- /jumbotron -->
 
     <div class="container pt-2">
@@ -64,9 +63,13 @@
                out (no pun intended) the negative distractions in life.
             </p>
           </div>
-          <div class="col-lg order-lg-2">
+          <div class="col-lg order-lg-2 text-center">
             <br>
-            <h3 class="text-center text-muted" class="mb-4">Landscaping Services Available</h3>
+            <% if user_signed_in? %>
+              <%= button_to 'Landscaping Services Available', landscaping_services_path, :method => :get,  :class => "btn btn-primary btn-lg" %>
+            <% else %>
+              <button type="button" class="btn btn-secondary">Landscaping Services Available</button>
+            <% end %>
             <div class="text-center" class="list-group">
               <a class="list-group-item list-group-item-action"><strong>Mow Grass</strong></a>
               <a class="list-group-item list-group-item-action"><strong>Weed Wacking</strong></a>

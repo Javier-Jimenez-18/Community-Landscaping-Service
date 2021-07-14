@@ -9,8 +9,6 @@ RSpec.describe LandscapingService, type: :model do
     subject.senior=nil
     expect(subject).to_not be_valid
   end
-
-
   it "is not valid if it does not have a senior first name" do
      subject.senior.first_name=nil
      expect(subject.senior).to_not be_valid
@@ -19,19 +17,10 @@ RSpec.describe LandscapingService, type: :model do
      subject.senior.last_name=nil
      expect(subject.senior).to_not be_valid
   end
-  it "is not valid if it does not have a senior first and last name" do
-     subject.senior.first_name=nil
-     subject.senior.last_name=nil
-     expect(subject.senior).to_not be_valid
-  end
-
-
   it "is valid if no student is selected" do
     subject.student=nil
     expect(subject).to be_valid
   end
-
-
   it "is not valid if it does not have a student first name" do
      subject.student.first_name=nil
      expect(subject.student).to_not be_valid
@@ -40,13 +29,6 @@ RSpec.describe LandscapingService, type: :model do
      subject.student.last_name=nil
      expect(subject.student).to_not be_valid
   end
-  it "is not valid if it does not have a student first and last name" do
-     subject.student.first_name=nil
-     subject.student.last_name=nil
-     expect(subject.student).to_not be_valid
-  end
-
-
   it "is not valid if it does not have a landscape service name" do
     subject.landscape_service=nil
     expect(subject).to_not be_valid
