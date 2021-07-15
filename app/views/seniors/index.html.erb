@@ -18,17 +18,19 @@
           <td><%= senior.full_name %></td>
           <td><%= senior.phone %></td>
           <td><%= senior.email %></td>
-          <td><%= link_to 'Show', senior, :class => "btn btn-primary btn-sm" %></td>
-          <td><%= link_to 'Edit', edit_senior_path(senior), :class => "btn btn-primary btn-sm" %></td>
+          <td><%= link_to 'Show', senior, :class => "btn btn-primary btn-sm" %> | </td>
+          <td><%= link_to 'Edit', edit_senior_path(senior), :class => "btn btn-primary btn-sm" %> | </td>
           <td><%= link_to 'Delete', senior, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-sm" %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
   <br>
-  <%= link_to 'Senior Registration', new_senior_path, :class => "btn btn-primary btn-sm" %>
+  <%= link_to 'Senior Registration', new_senior_path, :class => "btn btn-primary btn-sm" %> |
   <%= link_to 'Landscaping Services', landscaping_services_path, :class => "btn btn-primary btn-sm" %>
   <br>
   <br>
+  <%= link_to 'Edit User Account', edit_user_registration_path, :class => "btn btn-primary btn-sm" %> |
   <%= link_to 'Home', home_index_path, :class => "btn btn-primary btn-sm" %>
+  <br>
 </div>

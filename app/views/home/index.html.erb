@@ -7,7 +7,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
@@ -15,37 +14,26 @@
   <body>
     <!-- jumbotron -->
     <div class="jumbotron jumbotron-fluid bg-primary text-yellow">
-    <div class="container text-sm-center pt-0">
-
-    <!-- Test Overlay Pic -->
-    <!-- <div class="card bg-dark text-black"> -->
-      <!-- <img src="./weed-whacking.jpg" class="card-img" alt="style-ized overlay girl weed wacking"> -->
-      <%# <%= image_tag 'landscape.jpg', class: "card-img" %>
-      <!-- <div class="card-img-overlay"> -->
-        <!-- <h5 class="card-title">The Community Landscaping Service Project</h5> -->
-        <!-- <p class="card-text">Students, are you ready to make a difference in your community and get paid for it at the same time?</p> -->
-        <!-- <p class="card-text">Seniors, are you ready to hire a hardworking student to get your lanscaping, front, or back yard cleaned up?</p> -->
-      <!-- </div> -->
-    <!-- </div><!-- end Test  -->
-
-      <h1 class="display-2">The Community Landscaping Service Project</h1>
-      <p class="lead">Students, are you ready to make a difference in your community</p>
-      <p>and get paid for it at the same time?</p>
-      <p class="lead">Seniors, are you ready to hire a hardworking student to get your</p>
-      <p>lanscaping, front, or back yard cleaned up?</p>
-      <div class="btn-group mt-4" role="group" aria-label="Callout buttons">
-        <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#register">Seniors and Students Register Now</button>
-      </div>
+      <div class="container text-sm-center pt-0">
+        <h1 class="display-5 my-0">The Community Landscaping Service Project</h1>
+        <%= image_tag 'landscape.jpg', class: "card-img" %>
+        <p class="lead my-4">Students, are you ready to make a difference in your community</p>
+        <p>and get paid for it at the same time?</p>
+        <p class="lead my-4">Seniors, are you ready to hire a hardworking student to get your</p>
+        <p>lanscaping, front, or back yard cleaned up?</p>
+        <div class="btn-group mt-4" role="group" aria-label="Callout buttons">
+          <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#register">Seniors and Students Register Now</button>
+        </div>
       </div>
     </div> <!-- /jumbotron -->
 
-    <div class="container pt-2">
+    <div class="container pt-1">
         <!--  about  -->
         <div id="about" class="row">
-          <h1 class="text-center my-5" class="mb-4">About The Community Landscaping Service Project</h1>
+          <h1 class="text-center mt-5" class="mb-4">About The Community Landscaping Service Project</h1>
           <div class="col-lg order-lg-1">
             <%= image_tag 'man-backache.jpg', class: "img-fluid rounded d-block w-100", style: 'height:40vw;width:50vw;margin-bottom:0px;' %>
-            <h2 class="mb-4 text-muted my-5">Senior Citizens of all communities need help</h2>
+            <h2 class="mb-4 text-muted my-4">Senior Citizens of all communities need help</h2>
             <p>The elderly community, such as our parents or grandparents, often hurt themselves doing small tasks at home.
                Things such as cleaning up the yard, moving flower pots around, cutting weeds, or mowing the lawn, can be very
                dangerous tasks for them. Senior citizens (ages 65+) can sign up, schedule a landscaping appointment, and pay a small fee
@@ -55,7 +43,7 @@
           </div>
           <div class="col-lg order-lg-3">
             <%= image_tag 'lawn-mowing.jpg', class: "img-fluid  rounded d-block w-100", style: 'height:40vw;width:50vw;margin-bottom:0px;' %>
-            <h2 class="mb-4 text-muted my-5">Students of all communities need help</h2>
+            <h2 class="mb-4 text-muted my-4">Students of all communities need help</h2>
             <p>Students often need a positive outlet during the summer months when they are out of school. A summer job is a
                positive way for students to keep busy and earn money for their services. The Community Landscaping Project will
                allow students (grades 9-12) to sign up for summer work. The students will provide hands on landscaping labor that
@@ -265,10 +253,11 @@
         </div>
       </div>
     </div>
-    <!-- Optional JavaScript -->
+
+    <!-- Optional JavaScript
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"> </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"> </script>
   </body>
 </html>
